@@ -1,0 +1,31 @@
+{
+  "name": "Horizons-1st-Draft",
+  "email_notifications": {
+    "no_alert_for_skipped_runs": false
+  },
+  "webhook_notifications": {},
+  "timeout_seconds": 0,
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "Step_1",
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Repos/eugene.reis1@databricks.com/horizons/1000-Read Raw Data",
+        "source": "WORKSPACE"
+      },
+      "existing_cluster_id": "0123-135511-vbboimye",
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "notification_settings": {
+        "no_alert_for_skipped_runs": false,
+        "no_alert_for_canceled_runs": false,
+        "alert_on_last_attempt": false
+      },
+      "webhook_notifications": {}
+    }
+  ],
+  "run_as": {
+    "user_name": "eugene.reis1@databricks.com"
+  }
+}
