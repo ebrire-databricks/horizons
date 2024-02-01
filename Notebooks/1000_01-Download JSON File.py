@@ -7,7 +7,7 @@ print("Step 1 - Get Data")
 
 # COMMAND ----------
 
-dbutils.fs.ls('file:/Workspace/Repos')
+dbutils.fs.ls('file:/Workspace/Repos/Workflows/horizons/Data')
 
 # COMMAND ----------
 
