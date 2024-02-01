@@ -1,5 +1,5 @@
 # Databricks notebook source
-print("Step 1 - Download File")
+print("Step 1 - Get Data")
 
 # COMMAND ----------
 
@@ -7,11 +7,15 @@ print("Step 1 - Download File")
 
 # COMMAND ----------
 
+dbutils.fs.ls('file:/Workspace/Repos')
+
+# COMMAND ----------
+
 url = dbutils.widgets.getArgument('fileSourceURL')
 saveFile = dbutils.widgets.getArgument('fileTargetPath')
+print("Parameters ==>", url, saveFile)
 
-from urllib.request import urlretrieve
-urlretrieve(url, saveFile)
+dbutils.fs.cp(url, saveFile)
 
 # COMMAND ----------
 
